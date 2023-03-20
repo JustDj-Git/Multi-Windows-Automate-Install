@@ -1,0 +1,59 @@
+{
+    "control":[
+        { "VTOY_WIN11_BYPASS_CHECK": "1" },
+        { "VTOY_MENU_TIMEOUT": "5" },
+        { "VTOY_DEFAULT_SEARCH_ROOT": "/OS" },
+        { "VTOY_DEFAULT_IMAGE": "/OS/Windows_10/windows10.iso" }
+    ],
+    "theme":{
+        "file": "/ventoy/themes/dedsec/theme.txt"
+    },
+    "menu_alias":[
+        {
+            "image": "/OS/Windows_10/windows10.iso",
+            "alias": "Windows 10"
+        },
+        {
+            "image": "/OS/Windows_11/windows11.iso",
+            "alias": "Windows 11"
+        }
+    ],
+    "menu_class":[
+        {
+            "parent": "/OS/Windows_10",
+            "class": "windows_10"
+        },
+        {
+            "parent": "/OS/Windows_11",
+            "class": "windows_11"
+        }
+    ],
+    "auto_install":[
+        {
+            "image": "/OS/Windows_10/windows10.iso",
+            "template":[
+                "/unattend/autounattend_win10.xml"
+            ],
+            "timeout": 5,
+            "autosel": 1
+        },
+        {
+            "image": "/OS/Windows_11/windows11.iso",
+            "template":[
+                "/unattend/autounattend_win11.xml"
+            ],
+            "timeout": 5,
+            "autosel": 1
+        }
+    ],
+    "injection":[
+        {
+            "image": "/OS/Windows_10/windows10.iso",
+            "archive": "/OS/windows_injection.7z"
+        },
+        {
+            "image": "/OS/Windows_11/windows11.iso",
+            "archive": "/OS/windows_injection.7z"
+        }
+    ]
+}
